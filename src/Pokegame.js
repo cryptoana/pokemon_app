@@ -28,11 +28,16 @@ class Pokegame extends React.Component {
       hand1.push(randomPokemon)
     }
 
+    // for each pokemon in hand1, we are going to add the base experience starting from 0
+    let xp1 = hand1.reduce((XP, pokemon) => XP + pokemon.base_experience, 0)
+
+    let xp2 = hand2.reduce((XP, pokemon) => XP + pokemon.base_experience, 0)
+
     return (
       <div>
         <h1>POKEGAME</h1>
-        <Pokedex pokemon={hand1}/>
-        <Pokedex pokemon={hand2}/>
+        <Pokedex pokemon={hand1} XP={xp1} isWinner={xp1 > xp2}/>
+        <Pokedex pokemon={hand2} XP={xp2} isWinner={xp2 > xp1}/>
       </div>
     )
   }
