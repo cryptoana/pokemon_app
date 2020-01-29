@@ -35,7 +35,6 @@ class Pokegame extends React.Component {
 
     return (
       <div>
-        <h1>POKEGAME</h1>
         <Pokedex pokemon={hand1} XP={xp1} isWinner={xp1 > xp2}/>
         <Pokedex pokemon={hand2} XP={xp2} isWinner={xp2 > xp1}/>
       </div>
