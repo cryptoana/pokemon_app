@@ -10,10 +10,10 @@ class Pokecard extends React.Component {
 
     return (
       <div className="Pokecard">
-        <h1>{this.props.name}</h1>
+        <h1 className="Pokecard-title">{this.props.name}</h1>
         <img src={imgSrc} alt={this.props.name} />
-        <div>Type: {this.props.type}</div>
-        <div>XP: {this.props.XP}</div>
+        <div className="data">Type: {this.props.type}</div>
+        <div className="data"> XP: {this.props.XP}</div>
       </div>
     )
   }
