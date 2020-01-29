@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Pokecard from './Pokecard'
+import Pokedex from './Pokedex'
 
 class App extends React.Component {
   render () {
@@ -12,6 +13,7 @@ class App extends React.Component {
           type="fire"
           XP={62}
         />
+        <Pokedex />
       </div>
     );
   }
